@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 const Father = styled.div`
     display: flex;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
 `;
 
 const Box = styled.div`
@@ -20,14 +22,44 @@ const Text = styled.span`
     color: white;
 `;
 
+const Btn = styled.button`
+    color: white;
+    background-color: ${(props) => props.bgColor};
+    border: 0;
+    border-radius: 15px;
+`;
+
+// attrs을 사용하면 설정한 속성을 default로 할당할 수 있다
+const Input = styled.input.attrs({ required: true, minLength: 5 })`
+    background-color: turquoise;
+`;
+
 function App() {
     return (
-        <Father>
-            <Box bgColor="teal">
-                <Text>hello</Text>
-            </Box>
-            <Circle bgColor="black" />
-        </Father>
+        <div>
+            <Father>
+                <Box bgColor="teal">
+                    <Text>span</Text>
+                </Box>
+                <Circle bgColor="black">
+                    <Text as="h1">h1</Text>
+                </Circle>
+            </Father>
+
+            <Father>
+                <Btn bgColor="tomato">Log in</Btn>
+                {/* as를 사용함으로써 styled.button => styled.a로 변경 할 수 있다*/}
+                <Btn bgColor="blue" as="a" href="/">
+                    Log in
+                </Btn>
+            </Father>
+
+            <Father>
+                <Input />
+                <Input />
+                <Input />
+            </Father>
+        </div>
     );
 }
 
