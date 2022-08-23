@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 const Wrapper = styled.div`
     display: flex;
+    background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 const rotationAnimation = keyframes`

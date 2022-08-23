@@ -4,6 +4,8 @@ const Father = styled.div`
     display: flex;
     padding-top: 7.5px;
     padding-bottom: 7.5px;
+
+    background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 const Box = styled.div`
