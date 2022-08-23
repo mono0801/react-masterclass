@@ -5,6 +5,7 @@ const Father = styled.div`
 `;
 
 const Box = styled.div`
+    // ${(props) => props.bgColor}을 통해 컴포넌트에서 설정한 prop을 가져옴
     background-color: ${(props) => props.bgColor};
     width: 100px;
     height: 100px;
