@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const Father = styled.div`
     display: flex;
-    margin-top: 7.5px;
-    margin-bottom: 7.5px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
 `;
 
 const Box = styled.div`
@@ -45,7 +45,7 @@ function App() {
                 <Box bgColor="teal">
                     <Text>span</Text>
                 </Box>
-                <Circle bgColor="black">
+                <Circle bgColor="green">
                     <Text as="h1">h1</Text>
                 </Circle>
             </Father>
