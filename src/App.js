@@ -4,16 +4,15 @@ const Father = styled.div`
     display: flex;
 `;
 
-const Box_1 = styled.div`
-    background-color: teal;
+const Box = styled.div`
+    background-color: ${(props) => props.bgColor};
     width: 100px;
     height: 100px;
 `;
 
-const Box_2 = styled.div`
-    background-color: black;
-    width: 100px;
-    height: 100px;
+// Box의 css를 상속받아 확장함
+const Circle = styled(Box)`
+    border-radius: 50%;
 `;
 
 const Text = styled.span`
@@ -23,10 +22,10 @@ const Text = styled.span`
 function App() {
     return (
         <Father>
-            <Box_1>
+            <Box bgColor="teal">
                 <Text>hello</Text>
-            </Box_1>
-            <Box_2 />
+            </Box>
+            <Circle bgColor="black" />
         </Father>
     );
 }
