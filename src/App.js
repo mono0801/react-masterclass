@@ -11,6 +11,10 @@ const Box = styled.div`
     background-color: ${(props) => props.bgColor};
     width: 100px;
     height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 // Box의 css를 상속받아 확장함
